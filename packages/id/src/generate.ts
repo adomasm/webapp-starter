@@ -5,6 +5,8 @@ const b58 = baseX("123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz");
 // Customize the prefixes as needed
 const prefixes = {
   post: "post",
+  property: "prop",
+  gc: "gc", // Add prefix for GC data
 } as const;
 
 export function newId<TPrefix extends keyof typeof prefixes>(prefix: TPrefix) {

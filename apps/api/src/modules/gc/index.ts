@@ -1,0 +1,1 @@
+export { gcRoutes } from "./gc.routes"; 
