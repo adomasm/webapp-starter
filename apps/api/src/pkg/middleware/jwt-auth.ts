@@ -11,6 +11,7 @@ export const supabaseAuth = (): MiddlewareHandler => {
   return (c, next) => {
     const jwtMiddleware = jwt({
       secret: process.env.SUPABASE_JWT_SECRET!,
+      alg: "HS256",
     });
 
     return jwtMiddleware(c, next);
